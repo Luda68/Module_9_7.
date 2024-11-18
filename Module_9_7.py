@@ -19,8 +19,8 @@ def is_prime(func):
     def wrapper(*args, **kwargs):
         n = func(*args, **kwargs)
         prime = True
-        for i in range(2, int(func(*args, **kwargs) / 2)):
-            if func(*args, **kwargs) % i == 0:
+        for i in range(2, int(n/2)):
+            if n % i == 0:
                 prime = False
                 break
 
@@ -41,6 +41,8 @@ print(result)
 
 result = sum_three(20, 30, 60)
 print(result)
+
+
 
 
 
